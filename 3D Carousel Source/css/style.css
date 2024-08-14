@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-family: sans-serif;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/46f37945885079.584030cfd603d.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.carousel {
+  perspective: 1000px;
+}
+
+.carousel__container {
+  width: 300px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 20s infinite linear;
+}
+
+.carousel__item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  backface-visibility: hidden;
+  border-radius: 50px;
+  box-shadow: 5px 5px 50px #413f3f;
+}
+
+.carousel__item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(300px);
+  background: url(../imges/1.jfif);
+  background-size: cover;
+}
+
+.carousel__item:nth-child(2) {
+  transform: rotateY(72deg) translateZ(300px);
+  background: url(../imges/2.jfif);
+  background-size: cover;
+}
+
+.carousel__item:nth-child(3) {
+  transform: rotateY(144deg) translateZ(300px);
+  background: url(../imges/3.jfif);
+  background-size: cover;
+}
+
+.carousel__item:nth-child(4) {
+  transform: rotateY(216deg) translateZ(300px);
+  background: url(../imges/4.jfif);
+  background-size: cover;
+}
+
+.carousel__item:nth-child(5) {
+  transform: rotateY(288deg) translateZ(300px);
+  background: url(../imges/5.jfif);
+  background-size: cover;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
